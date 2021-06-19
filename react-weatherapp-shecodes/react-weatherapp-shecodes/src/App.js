@@ -1,12 +1,29 @@
-import React from "react";
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Search from "./Search.js";
+import Forecast from "./Forecast.js";
 
 export default function App() {
   return (
-    <div className="App">
-      <p> "Hello weather app"</p>
-      <footer>Coded by Chloe KB 👩🏼‍💻 and is <a href="https://github.com/ChloeKB"> open-sourced on GitHub </a> </footer>
+    <div className="container">
+      <div className="row justify-content-evenly">
+        <div className="col-6 box-one">
+          <br />
+          <Search />
+          <Forecast
+            city="Madrid"
+            date="Monday May 24th"
+            time="11:48"
+            description="Sunny"
+            temperature={28}
+            imageUrl="https=//ssl.gstatic.com/onebox/weather/64/sunny.png"
+            humidity={20}
+            minTemp={17}
+            maxTemp={28}
+            sunrise="07:02"
+            sunset="21:43"
+          />
+        </div>
+      </div>
     </div>
   );
 }
